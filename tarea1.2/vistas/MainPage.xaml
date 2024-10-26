@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="tarea1._2.vistas.MainPage"
+             Title="Menu Prinicpal">
+    <ScrollView>
+
+        <VerticalStackLayout>
+
+            
+            <Label
+                Margin="0,40,0,10"
+                FontAttributes="Bold"
+                FontSize="Title"
+                TextColor="Black"
+                HorizontalOptions="Center"
+                SemanticProperties.HeadingLevel="Level1"
+                Style="{StaticResource Headline}"
+                Text="Biblioteca UTH Autores de Libros" />
+
+            <Label
+                Margin="0,0,0,100"
+                FontAttributes="Bold"
+                FontSize="Title"
+                TextColor="Black"
+                HorizontalOptions="Center"
+                SemanticProperties.HeadingLevel="Level1"
+                Style="{StaticResource SubHeadline}"
+                Text="UTH" />
+
+            <Button
+                x:Name="btnAgregar"
+                Margin="0,-50,0,10"
+                WidthRequest="200"
+                HeightRequest="50"
+                Background="Blue" TextColor="White" FontAttributes="Bold"
+                Clicked="btnAgregar_Clicked"
+                HorizontalOptions="Center"
+                SemanticProperties.Hint="Agregar un nuevo Autor"
+                Text="AGREGAR AUTOR" />
+
+            <Button
+                x:Name="btnVerAutores"
+                Margin="0,10,0,100"
+                WidthRequest="200"
+                HeightRequest="50"
+                Background="blue" TextColor="White" FontAttributes="Bold"
+                Clicked="btnVerAutores_Clicked"
+                HorizontalOptions="Center"
+                SemanticProperties.Hint="Ver Lista de Autores"
+                Text="VER AUTORES" />
+
+           
+
+        </VerticalStackLayout>
+
+    </ScrollView>
+
+
+</ContentPage>

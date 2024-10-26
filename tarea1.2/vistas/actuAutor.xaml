@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="tarea1._2.vistas.actuAutor"
+             BackgroundColor="#fff">
+    <ScrollView>
+
+        <VerticalStackLayout Padding="30,0" Spacing="20">
+            <Label
+        Margin="0,20,0,0"
+        TextColor="Black"
+        FontAttributes="Bold"
+        FontSize="Title"
+        HorizontalOptions="Center"
+        SemanticProperties.HeadingLevel="Level1"
+        Style="{StaticResource Headline}"
+        Text="Biblioteca UTH" />
+
+            <Label
+        Margin="0,0,0,20"
+        TextColor="Black"
+        FontAttributes="Bold"
+        FontSize="Subtitle"
+        HorizontalOptions="Center"
+        SemanticProperties.HeadingLevel="Level1"
+        Style="{StaticResource Headline}"
+        Text="Autores de Libros" />
+
+            <Image
+        x:Name="imgFoto"
+        Margin="0,-20,0,-5"
+        Aspect="AspectFit"
+        HeightRequest="150"
+        HorizontalOptions="CenterAndExpand"
+        Source="{Binding Foto, Converter={StaticResource BaseArray}}"
+        VerticalOptions="CenterAndExpand"
+        WidthRequest="150" />
+
+            <Button
+        x:Name="btnfoto"
+        Margin="10,0,10,10"
+        Background="Blue" TextColor="White" FontAttributes="Bold"
+        WidthRequest="200"
+        HeightRequest="50"
+        Clicked="btnfoto_Clicked"
+        HorizontalOptions="Center"
+        SemanticProperties.Hint="Agregar"
+        Text="CAMBIAR FOTO" />
+
+            <HorizontalStackLayout HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand">
+
+                <Label
+            Margin="0,0,0,10"
+            TextColor="Black"
+            FontAttributes="Bold"
+            FontSize="Body"
+            HorizontalOptions="Start"
+            Text="Nombre del Autor:"
+            VerticalOptions="Center" />
+
+                <Entry
+            x:Name="txtNombres"
+            Margin="15,0,0,10"
+            TextColor="Black"
+            FontAttributes="Bold"
+            FontSize="Body"
+            HorizontalOptions="Center"
+            Keyboard="Text"
+            Text="{Binding Nombres}"
+            Placeholder="Nombre Apellido"
+            VerticalOptions="Center" />
+
+            </HorizontalStackLayout>
+
+            <Label
+        Margin="0,0,0,5"
+        FontAttributes="Bold"
+        FontSize="Body"
+        HorizontalOptions="Start"
+        TextColor="Black"
+        Text="Seleccione la Nacionalidad"
+        VerticalOptions="Center" />
+
+            <Picker
+        x:Name="countryPicker"
+        Title="Seleccione la Nacionalidad"
+        TextColor="Black" FontAttributes="Bold"
+        SelectedIndexChanged="countryPicker_SelectedIndexChanged" />
+
+            <Button
+        x:Name="btnAgregar"
+        Margin="0,30,0,0"
+        Background="blue" TextColor="White" FontAttributes="Bold"
+        WidthRequest="200"
+        HeightRequest="50"
+        Clicked="btnAgregar_Clicked"
+        HorizontalOptions="Center"
+        SemanticProperties.Hint="Agregar"
+        Text="ACTUALIZAR" />
+
+            <Button
+        x:Name="btnRegresar"
+        Margin="0,0,0,10"
+        Background="blue" TextColor="White" FontAttributes="Bold"
+        WidthRequest="200"
+        HeightRequest="50"
+        Clicked="btnRegresar_Clicked"
+        HorizontalOptions="Center"
+        SemanticProperties.Hint="Regresar a Menu Principal"
+        Text="REGRESAR" />
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
